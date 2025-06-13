@@ -1,18 +1,50 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/navbar/navbar'
 import styles from './login.module.css'
 import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-
+import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import LoggedIn from '../loggedIn/page'
+import config from "../../config.js"
 
 function Login() {
-  const session = useSession();
+  const [user, setUser] = useState(null); 
+  const router = useRouter();
+  
+  useEffect(() => {
+    if(user){
+       router.push("/loggedIn"); 
 
-  console.log(session)
+    }
+   
+  }, [user])
+  
+  useEffect(() => {
+    const auth = getAuth(config);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+        console.log(user)
+      } else {
+        setUser(null);
+      }
+    });
 
+    return () => unsubscribe();
+  }, []);
 
+  const signInWithGoogle = async () => {
+    const auth = getAuth(config);
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      router.push("/loggedIn"); 
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
+  }
 
   return (
     <>
@@ -36,7 +68,7 @@ function Login() {
           </div>
           <div className={styles.right}>
             <h3 className={styles.rightHeading}>Choose an option to continue</h3>
-            <button className={styles.googleButton} onClick={() => signIn('google')}>
+            <button className={styles.googleButton} onClick={signInWithGoogle}>
               Sign in with Google
             </button>
             <p className={styles.rightPara}> - or - </p>
@@ -54,3 +86,4 @@ function Login() {
 }
 
 export default Login;
+ 

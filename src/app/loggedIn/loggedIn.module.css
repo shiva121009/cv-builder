@@ -1,0 +1,294 @@
+.body {
+  height: 92.7vh;
+  width: 100vw;
+  background-color: #200f53;
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.left {
+  height: 100%;
+  width: 45%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6em;
+  padding-left: 4em;
+  padding-right: 3em;
+  gap: 40px;
+}
+
+
+
+
+.greeting {
+  color: #e4e4fc;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+}
+
+.gretingPhrase {
+  display: flex;
+  letter-spacing: -0.5px;
+  font-size: 2em;
+  font-family: "Cerebri Sans", sans-serif;
+  /* color: #feffff; */
+  font-weight: 600;
+  color: #f3f6fe;
+  line-height: 1.2;
+}
+
+.gretingPhrase2 {
+  font-size: 1em;
+  font-family: "Cerebri Sans", sans-serif;
+  font-weight: 400;
+  color: #b9b9ce;
+  padding-top: 20px;
+}
+.mainContainer{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* text-align: start; */
+  gap: 25px;
+ 
+}
+
+.container {
+
+  display: flex;
+  justify-content: space-between;
+}
+.containerLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerLinks:hover{
+  scale: 1.01;
+}
+.quickLink h1{
+      font-size: 1em;
+    font-family: "Cerebri Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    /* margin-bottom: 20px; */
+
+}
+.paraLink{
+      font-weight: 400;
+    font-family: "Cerebri Sans", sans-serif;
+    font-size: 0.8em;
+    padding-bottom: 12px;
+    color: #beb9d5;
+    text-align: center;
+    
+}
+
+.subtitle{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    background: transparent;
+    max-width: 150px;
+    text-align: center;
+    padding: 0px;
+    line-height: 23px;
+    font-size: 0.83em;
+    font-family: "Cerebri Sans", sans-serif;
+    color: #beb9d5;
+    font-weight:600;
+
+}
+
+.dashboard
+{
+      font-size: 1em;
+    font-family: "Cerebri Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.dashboardContainer{
+  height: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+
+}
+.linkContainer{
+ display: flex;
+  flex-direction: row;
+  gap: 4px;
+  
+  
+}
+.containerRow1{
+ 
+ display: flex;
+ flex-direction: column;
+  height: auto;
+  width: 50%;
+}
+.containerRow2{
+ 
+ display: flex;
+flex-direction: column;
+  height: auto;
+  width: 50%;
+
+}
+.links{
+  height: 70px;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: start;
+  align-items:center;
+  gap: 35px;
+  padding: 0 25px;
+  margin: 1px;
+  border-radius: 5px;
+    color: #c8c7d5;
+
+  
+  
+}
+.links:hover{
+  background-color: #350596;
+  color: white;
+  scale: 1.01;
+  
+}
+.active{
+  background-color: #4f0fd1;
+}
+.links p{
+ 
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+ 
+    
+}
+.links p:hover{
+  color: white;
+}
+
+
+.right {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+  /* max-height:calc(100vh-50px) */
+}
+.card {
+  border-radius: 15px;
+  padding: 50px;
+  height: 150vh;
+  width: 94%;
+  margin: 32px auto ;
+  padding-top: 4em !important;
+  position: relative;
+  background-color: #e9e7fe;
+  background: linear-gradient(145deg, #eae8ff, #d8e1f8);
+  display: flex;
+  flex-direction: column;
+
+}
+.getProContainer{
+      font-family: 'Cerebri Sans', sans-serif;
+    border: 2px solid #FFA500;
+    background-color: #FFF5E6;
+    padding: 30px;
+    margin-bottom: 70px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.proDisc p{
+      margin-bottom: 20px;
+    line-height: 1.4;
+    margin-top: 20px;
+    font-size: 0.98em;
+    color: #68686a;
+}
+.getProButton button{
+background-color: #FFA500;
+ border: none; 
+ color: white; 
+ height: 40px; 
+ line-height: 40px; 
+ padding: 0 25px; 
+ font-weight: 600; 
+ cursor: pointer; 
+ font-size: 15px; 
+ font-family: 'Source Sans Pro', sans-serif; border-radius: 5px; 
+ text-transform: uppercase; 
+ letter-spacing: .025em;
+  animation: pulseCTA 1.5s infinite;
+}
+@keyframes pulseCTA {
+  0% {
+    transform: scale(1);
+    box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 0px;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04007);
+    box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 8.0135px;
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 0px;
+    opacity: 1;
+  }
+}
+
+.proPara{
+      font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+   color: #68686a;
+}
+ 
+
+.progressContainer{
+  display: flex;
+  flex-direction: column;
+   height: 100px;
+   width: 100%;
+   /* background-color: #200f53; */
+}
+.progressHeading h1{
+      text-align: left;
+    letter-spacing: 0.5px;
+    font-size: 1.4em;
+    color: #24263b;
+    padding-bottom: 0.5em;
+    font-weight: 700;
+}
+.progressPara h2{
+      font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    font-size: 1.1em;
+    /* color: #484848; */
+    color: #6f6d6d;
+      font-family: 'Cerebri Sans', sans-serif;
+    padding-bottom: 15px;
+}
