@@ -4,22 +4,22 @@ import Navbar from '../components/navbar/navbar'
 import styles from './login.module.css'
 import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter,usePathname } from 'next/navigation'
 import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import LoggedIn from '../loggedIn/page'
 import config from "../../config.js"
 
-function Login() {
+function Login({children}) {
   const [user, setUser] = useState(null); 
   const router = useRouter();
   
-  useEffect(() => {
-    if(user){
-       router.push("/loggedIn"); 
+  // useEffect(() => {
+  //   if(user){
+  //      router.push("/loggedIn"); 
 
-    }
+  //   }
    
-  }, [user])
+  // }, [user])
   
   useEffect(() => {
     const auth = getAuth(config);
@@ -44,6 +44,9 @@ function Login() {
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }
+//  const pathName= usePathname();
+//   console.log(pathName)
+
   }
 
   return (

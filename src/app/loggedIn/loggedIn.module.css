@@ -1,5 +1,6 @@
 .body {
   height: 92.7vh;
+  /* position: fixed; */
   width: 100vw;
   background-color: #200f53;
   display: flex;
@@ -48,7 +49,8 @@
   color: #b9b9ce;
   padding-top: 20px;
 }
-.mainContainer{
+
+.mainContainer {
   height: auto;
   width: 100%;
   display: flex;
@@ -56,7 +58,7 @@
   color: white;
   /* text-align: start; */
   gap: 25px;
- 
+
 }
 
 .container {
@@ -64,121 +66,133 @@
   display: flex;
   justify-content: space-between;
 }
-.containerLinks{
+
+.containerLinks {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.containerLinks:hover{
+
+.containerLinks:hover {
   scale: 1.01;
 }
-.quickLink h1{
-      font-size: 1em;
-    font-family: "Cerebri Sans", sans-serif;
-    font-weight: 600;
-    color: #fff;
-    /* margin-bottom: 20px; */
 
-}
-.paraLink{
-      font-weight: 400;
-    font-family: "Cerebri Sans", sans-serif;
-    font-size: 0.8em;
-    padding-bottom: 12px;
-    color: #beb9d5;
-    text-align: center;
-    
-}
-
-.subtitle{
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 20px;
-    background: transparent;
-    max-width: 150px;
-    text-align: center;
-    padding: 0px;
-    line-height: 23px;
-    font-size: 0.83em;
-    font-family: "Cerebri Sans", sans-serif;
-    color: #beb9d5;
-    font-weight:600;
+.quickLink h1 {
+  font-size: 1em;
+  font-family: "Cerebri Sans", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  /* margin-bottom: 20px; */
 
 }
 
-.dashboard
-{
-      font-size: 1em;
-    font-family: "Cerebri Sans", sans-serif;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 40px;
+.paraLink {
+  font-weight: 400;
+  font-family: "Cerebri Sans", sans-serif;
+  font-size: 0.8em;
+  padding-bottom: 12px;
+  color: #beb9d5;
+  text-align: center;
+
 }
-.dashboardContainer{
+
+.subtitle {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 20px;
+  background: transparent;
+  max-width: 150px;
+  text-align: center;
+  padding: 0px;
+  line-height: 23px;
+  font-size: 0.83em;
+  font-family: "Cerebri Sans", sans-serif;
+  color: #beb9d5;
+  font-weight: 600;
+
+}
+
+.dashboard {
+  font-size: 1em;
+  font-family: "Cerebri Sans", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.dashboardContainer {
   height: auto;
   width: 90%;
   display: flex;
   flex-direction: column;
 
 }
-.linkContainer{
- display: flex;
+
+.linkContainer {
+  display: flex;
   flex-direction: row;
   gap: 4px;
-  
-  
+
+
 }
-.containerRow1{
- 
- display: flex;
- flex-direction: column;
+
+.containerRow1 {
+
+  display: flex;
+  flex-direction: column;
   height: auto;
   width: 50%;
 }
-.containerRow2{
- 
- display: flex;
-flex-direction: column;
+
+.containerRow2 {
+
+  display: flex;
+  flex-direction: column;
   height: auto;
   width: 50%;
 
 }
-.links{
+
+.links {
   height: 70px;
   width: 100%;
- 
+
   display: flex;
   justify-content: start;
-  align-items:center;
+  align-items: center;
   gap: 35px;
   padding: 0 25px;
   margin: 1px;
   border-radius: 5px;
-    color: #c8c7d5;
+  color: #c8c7d5;
 
-  
-  
+
+
 }
-.links:hover{
+
+.links:hover {
   background-color: #350596;
   color: white;
   scale: 1.01;
-  
+
 }
-.active{
+
+.active {
   background-color: #4f0fd1;
 }
-.links p{
- 
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
- 
-    
+
+.links p {
+
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+
 }
-.links p:hover{
+
+.links p:hover {
   color: white;
 }
 
@@ -189,66 +203,76 @@ flex-direction: column;
   display: flex;
   overflow-y: scroll;
   overflow-x: hidden;
-  
+
   /* max-height:calc(100vh-50px) */
 }
+
 .card {
   border-radius: 15px;
   padding: 50px;
-  height: 150vh;
+  height: 262vh;
   width: 94%;
-  margin: 32px auto ;
+  margin: 32px auto;
   padding-top: 4em !important;
   position: relative;
   background-color: #e9e7fe;
   background: linear-gradient(145deg, #eae8ff, #d8e1f8);
   display: flex;
   flex-direction: column;
+  /* overflow-y: scroll; */
+padding-bottom: 20px;
 
 }
-.getProContainer{
-      font-family: 'Cerebri Sans', sans-serif;
-    border: 2px solid #FFA500;
-    background-color: #FFF5E6;
-    padding: 30px;
-    margin-bottom: 70px;
-    width: 100%;
-    box-sizing: border-box;
+
+.getProContainer {
+  font-family: 'Cerebri Sans', sans-serif;
+  border: 2px solid #FFA500;
+  background-color: #FFF5E6;
+  padding: 30px;
+  margin-bottom: 70px;
+  width: 100%;
+  box-sizing: border-box;
 
 }
-.proDisc p{
-      margin-bottom: 20px;
-    line-height: 1.4;
-    margin-top: 20px;
-    font-size: 0.98em;
-    color: #68686a;
+
+.proDisc p {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  margin-top: 20px;
+  font-size: 0.98em;
+  color: #68686a;
 }
-.getProButton button{
-background-color: #FFA500;
- border: none; 
- color: white; 
- height: 40px; 
- line-height: 40px; 
- padding: 0 25px; 
- font-weight: 600; 
- cursor: pointer; 
- font-size: 15px; 
- font-family: 'Source Sans Pro', sans-serif; border-radius: 5px; 
- text-transform: uppercase; 
- letter-spacing: .025em;
+
+.getProButton button {
+  background-color: #FFA500;
+  border: none;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: .025em;
   animation: pulseCTA 1.5s infinite;
 }
+
 @keyframes pulseCTA {
   0% {
     transform: scale(1);
     box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 0px;
     opacity: 1;
   }
+
   50% {
     transform: scale(1.04007);
     box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 8.0135px;
     opacity: 0.9;
   }
+
   100% {
     transform: scale(1);
     box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 0px;
@@ -256,39 +280,225 @@ background-color: #FFA500;
   }
 }
 
-.proPara{
-      font-size: 15px;
-    margin-bottom: 0px;
-    margin-top: 20px;
-    font-style: italic;
-    line-height: 1.4;
-    letter-spacing: -0.3px;
-   color: #68686a;
+.proPara {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  color: #68686a;
 }
- 
 
-.progressContainer{
+
+.progressContainer {
   display: flex;
   flex-direction: column;
-   height: 100px;
-   width: 100%;
-   /* background-color: #200f53; */
+  height: 100px;
+  width: 100%;
+  margin-bottom: 40px;
 }
-.progressHeading h1{
-      text-align: left;
-    letter-spacing: 0.5px;
-    font-size: 1.4em;
-    color: #24263b;
-    padding-bottom: 0.5em;
-    font-weight: 700;
+
+.progressHeading h1 {
+  text-align: left;
+  letter-spacing: 0.2px;
+  font-size: 1.2em;
+  color: #24263b;
+  padding-bottom: 0.5em;
+  font-weight: 700;
 }
-.progressPara h2{
-      font-weight: 400;
+
+.progressPara h2 {
+  font-weight: 400;
+  text-align: left;
+  font-size: 20px;
+  font-size: 1.1em;
+  /* color: #484848; */
+  color: #6f6d6d;
+  font-family: 'Cerebri Sans', sans-serif;
+  padding-bottom: 15px;
+}
+
+.box {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 30px 40px;
+  display: flex;
+  box-shadow: rgba(255, 165, 0, 0.14) 0px 0px 0px 0px;
+  margin-top: 30px;
+}
+
+.box:hover {
+  border: 1px solid #4d11cd;
+  border-radius: 0px;
+  background-color: #ecf0ff;
+}
+
+.boxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.boxheading {
+  font-weight: 700;
+  font-family: "Cerebri Sans", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  color: #4f0ed1;
+  text-transform: uppercase;
+
+}
+
+.boxDesc strong {
+  font-weight: 550;
+  letter-spacing: -0.2px;
+}
+
+.boxDesc {
+  font-family: "Cerebri Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+.boxButton {
+  white-space: nowrap;
+white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-size: 15px;
+    color: #5a5a5a;
+    text-decoration: none;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+    cursor: pointer;
+    border-radius: 15px;
+    background: #f3f6fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    gap: 10px;
+}
+
+
+.boxButton:hover {
+  scale: 1.02;
+  background-color: #4f0ed1;
+  color: white;
+
+}
+
+.boxRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.scoreContainer {
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Cerebri Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  max-height: 75px;
+  background-color: #fbe7ee;
+  color: #4c4547;
+}
+
+.outOf {
+  font-size: 0.5em;
+}
+
+.hiddenBox{
+  padding: 30px;
+    border-top: 1px solid #d7d3e0;
+        width: 100%;
+        background-color: #fff;
+        border-end-start-radius: 8px;
+        border-end-end-radius: 8px;
+}
+.hiddenContentBox{
+      display: inline-block;
+    vertical-align: top;
+    max-width: 90%;
+    padding-bottom: 45px;
+        width: 100%;
+    max-width: 100%;
+
+}
+.hiddenBoxPara{
+    font-family: "Cerebri Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+        margin-bottom: 1.5em;
+        margin-top: 20px;
+
+}
+.progressBox{
+      display: inline-block;
+    font-size: 1em;
+    font-family: "Cerebri Sans", sans-serif;
+    margin: 30px 0px;
+    line-height: 1.7;
+    padding: 30px 30px ;
+    border-radius: 5px;
+    background: #fbe7ee;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #1d2266;
+    letter-spacing: 0.4px;
+
+}
+/* .boxButton1{
+  white-space: nowrap;
+  display: inline-block;
+  height: 40px;
+  width: 35%;
+  line-height: 40px;
+  padding: 0 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  font-size: 15px;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  background: #e1e1e3;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: black;
+}
+.boxButton1:hover{
+   scale: 1.02;
+   color: white;
+   background-color: #4f0ed1;
+} */
+ .additionalContainer{
+margin-top: 85px;
+ }
+
+ .additionalContainerHeading{
     text-align: left;
-    font-size: 20px;
-    font-size: 1.1em;
-    /* color: #484848; */
-    color: #6f6d6d;
-      font-family: 'Cerebri Sans', sans-serif;
-    padding-bottom: 15px;
-}
+  letter-spacing: 0.2px;
+  font-size: 1.2em;
+  color: #24263b;
+  padding-bottom: 0.5em;
+  font-weight: 700;
+ }

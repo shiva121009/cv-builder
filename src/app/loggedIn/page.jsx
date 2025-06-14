@@ -9,9 +9,11 @@ import Styles from './loggedIn.module.css'
 import config from "../../config.js"
 import Navbar from '../components/navbar/navbar';
 import Greeting from '../components/greeting';
-import { FaMagic, FaBolt, FaCommentAlt, FaStar, FaAward, FaLifeRing, FaCog } from 'react-icons/fa';
+import { FaMagic, FaUpload, FaBolt, FaCommentAlt, FaStar, FaAward, FaLifeRing, FaCog } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
+import { FiTarget } from "react-icons/fi";
 import Subscription from '../Subscription/page';
+import UploadResume from '../components/uploadResume/page';
 
 // import loggedIn, {user} from '../components/loggedin/page';
 function LoggedIn() {
@@ -30,7 +32,9 @@ function LoggedIn() {
     return () => unsubscribe();
   }, [auth, router]);
 
-
+  // function hidden() {
+  //   const [showHidden, setShowHidden] = useState(false)
+  // }
 
   return (
     <>
@@ -144,35 +148,129 @@ function LoggedIn() {
               </div>
               <div className={Styles.proDisc} ><p>Unlock AI-powered resume writing, unlimited reviews, ATS optimization, industry-specific templates, and expert tools. Proven to get you more interviews</p></div>
               <div className={Styles.getProButton}>
-                <button  >UPGRADE TO PRO</button>
+              <Link href="/Subscription">  <button  >UPGRADE TO PRO</button></Link>
               </div>
-               <p className={Styles.proPara}>* Limited Time Bonus: You'll also get access to our LinkedIn optimization suite (worth $49) for free.</p>
-
-               
-               </div>
-            
-             <div className={Styles.progressContainer}>
-                  <div className={Styles.progressHeading}><h1>Track your progress</h1></div>
-                  <div className={Styles.progressPara}>
-                    <h2>Our tools will guide you through the process of creating your <strong>most effective</strong> resume and LinkedIn profile.
-                     resume and LinkedIn profile.
-			             	To make the most out of them, follow the steps below.
+              <p className={Styles.proPara}>* Limited Time Bonus: You'll also get access to our LinkedIn optimization suite (worth $49) for free.</p>
 
 
-				
-			            </h2></div>
             </div>
-           
+
+            <div className={Styles.progressContainer}>
+              <div className={Styles.progressHeading}><h1>Track your progress</h1></div>
+              <div className={Styles.progressPara}>
+                <h2>Our tools will guide you through the process of creating your <strong>most effective</strong> resume and LinkedIn profile.
+                  resume and LinkedIn profile.
+                  To make the most out of them, follow the steps below.
+
+
+
+                </h2></div>
+              <div className={Styles.box} >
+                <div className={Styles.boxContent}>
+                  <h1 className={Styles.boxheading}>Overall Resume Score</h1>
+                  <h2 className={Styles.boxDesc}><strong>You have not uploaded your resume yet.</strong>
+                    Get your free resume score.
+                  </h2>
+                  <Link href="../components/uploadResume"><div className={Styles.boxButton} style={{backgroundColor:"#4f0ed1", color:"white"}}><FaUpload className={Styles.boxIcons} ></FaUpload><p className={Styles.boxButtonPara}>Upload Resume</p></div></Link>
+                </div>
+                <div className={Styles.boxRight}>
+                  <div className={Styles.scoreContainer}>
+                    ?
+                    <span className={Styles.outOf}>/100</span>
+                  </div>
+                </div>
+
+              </div>
+              
+              {/* <div className={Styles.hiddenBox} style={{}} >
+                <div className={Styles.hiddenContentBox}>
+                  <p className={Styles.hiddenBoxPara}>
+                    Upload your resume to our AI-powered Score My Resume and get
+                    expert feedback, instantly. We'll score your resume on key
+                    criteria recruiters and hiring managers
+                    look for, such as impact, word choice and style.
+                  </p>
+                  <div className={Styles.progressBox}>
+                    <strong>You have not uploaded your resume for a free resume review yet.</strong>
+                    Upload your resume to get started. If you need a
+                    resume template or sample bullet points, see the section above.
+                  </div>
+                  <Link href="/"><div className={Styles.boxButton1}><FaUpload className="text-lg icon" ></FaUpload><p className={Styles.boxButtonPara}>Upload Resume</p></div></Link>
 
                 </div>
-          
-        
+              </div> */}
+
+              <div className={Styles.box} >
+                <div className={Styles.boxContent}>
+                  <h1 className={Styles.boxheading}>Targeted Resume score</h1>
+                  <h2 className={Styles.boxDesc}><strong>You have not tried this tool yet</strong>
+                   . Your resume may be missing important keywords. Match it to a job posting to fix.						
+                  </h2>
+                  <Link href="/"><div className={Styles.boxButton}><FiTarget className={Styles.boxIcons} ></FiTarget><p className={Styles.boxButtonPara}>Target your resume</p></div></Link>
+                </div>
+                <div className={Styles.boxRight}>
+                  <div className={Styles.scoreContainer}>
+                    ?
+                    <span className={Styles.outOf}>/100</span>
+                  </div>
+                </div>
+
+              </div>
+              <div className={Styles.box} >
+                <div className={Styles.boxContent}>
+                  <h1 className={Styles.boxheading}>LinkedIn profile score</h1>
+                  <h2 className={Styles.boxDesc}><strong>You have not optimized your LinkedIn profile yet.</strong>
+                    You might be missing out on opportunities from recruiters.						
+                  </h2>
+                  <Link href="/"><div className={Styles.boxButton}><FaLinkedin className={Styles.boxIcons}></FaLinkedin><p className={Styles.boxButtonPara}>  Upload LinkedIn profile</p></div></Link>
+                </div>
+                <div className={Styles.boxRight}>
+                  <div className={Styles.scoreContainer}>
+                    ?
+                    <span className={Styles.outOf}>/100</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className={Styles.additionalContainer}>
+                <h1 className={Styles.additionalContainerHeading}>
+                  Additional resources
+                </h1>
+              </div>
+               <div className={Styles.box} >
+                <div className={Styles.boxContent}>
+               <Link href="/"> <h1 className={Styles.boxheading}>COVER LETTER GENERATOR</h1></Link> 
+                  <h2 className={Styles.boxDesc}>Let our AI write a great cover letter for you, in seconds. 
+                  </h2>
+                </div>
+                <div className={Styles.boxRight} style={{width: "45%", display:"flex", alignItems:"flex-start", justifyContent:"flex-start" }}>
+                  <Link href="/"><div className={Styles.boxButton} style={{width:"100%"}}><FaUpload className={Styles.boxIcons} ></FaUpload><p className={Styles.boxButtonPara}>COVER LETTER GENERATOR</p></div></Link>
+                 
+                </div>
+
+              </div>
+               <div className={Styles.box} >
+                <div className={Styles.boxContent}>
+                  <h1 className={Styles.boxheading}>Don't have a resume?</h1>
+                  <h2 className={Styles.boxDesc}>If you'd like to create a new resume with our sample templates and bullet points, click this.
+                  </h2>
+                </div>
+            
+
+              </div>
+            </div>
+
+
           </div>
-    </div>
 
-  
 
-  </>
+        </div>
+      </div>
+
+
+
+    </>
 
   )
 }
