@@ -9,7 +9,7 @@ import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from
 import LoggedIn from '../loggedIn/page'
 import config from "../../config.js"
 
-function Login({children}) {
+function Login() {
   const [user, setUser] = useState(null); 
   const router = useRouter();
   
