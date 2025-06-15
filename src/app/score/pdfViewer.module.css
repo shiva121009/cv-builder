@@ -1,0 +1,28 @@
+.body{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(43, 206, 206); */
+}
+
+.pdfFeatures{
+    height:10%;
+    width: 100%;
+
+}
+.list{
+    display: flex;
+
+}
+.listItem{
+    height: 50px;
+    width: 33%;
+    background-color: #162648;
+    margin: 0 0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: WHITE;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
