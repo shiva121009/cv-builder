@@ -12,6 +12,8 @@
 .right{
     height: 100%;
     width: 45%;
+    overflow-y: scroll;
+    border: 1px solid black
 }
 
 .dashboardSide{
@@ -22,7 +24,7 @@
     font-size: 1em;
     z-index: 0;
     padding: 15px;
-   overflow-y: auto;
+    overflow-y: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -31,18 +33,17 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 .dashboardSide::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+    width: 0px;
+    background: transparent;
 }
 
 .scoreCircle{
-height:130px;
-width: 150px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 20px;
-
+    height:130px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 .circle
 {
@@ -57,16 +58,14 @@ margin-top: 20px;
     align-items: center;
 }
 .score {
-display: flex;   
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 10px;
-
-
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 .score h1{
-        font-size: 35px;
+    font-size: 35px;
     font-weight: 600;
 }
 
@@ -85,8 +84,6 @@ padding: 10px;
     justify-content: flex-start;
     padding-left: 15px;
     border-radius: 4px;  
-
-
 }
 .homeTab li{
     height: 45px;
@@ -120,7 +117,6 @@ padding: 10px;
     font-size: 12px;
     letter-spacing: 0.8px;
     margin-top: 20px;
-
 }
 .List{
     height: auto;
@@ -135,19 +131,18 @@ padding: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* background: black; */
     height: 40px;
     justify-content: space-between;
     align-items: center;
 }
 .subtreeSection:hover{
     scale: 1.1;
-     color: #655fc9;
-     font-weight:550 ;
-       background: #f3f6fe;
+    color: #655fc9;
+    font-weight:550 ;
+    background: #f3f6fe;
 }
 .navTab{
-        display: inline-block;
+    display: inline-block;
     vertical-align: top;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -161,7 +156,6 @@ padding: 10px;
     color: #ee7491;
     font-weight: 550;
     padding: 0px 5px;
-    /* margin-right: 15px; */
     border-radius: 4px;
     letter-spacing: -1px;
 
@@ -193,7 +187,6 @@ margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 0 11px ; */
     width: 100%;
     gap: 6px;
 }
@@ -219,7 +212,172 @@ margin-top: 20px;
 }
 .navTabText, .navTabValue{
     color: white;
-       display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+.pdfbody{ 
+    height: 100%;
+    width: 100%; 
+}
+.pdfFeatures{
+    height: 7.19%;
+    position: fixed;
+    width: 100%;
+}
+.list{
+    display: flex;
+    background-color: #414f6f;
+    opacity: 0.98;
+    width: 600px; 
+}
+.listItem{
+    height: 50px;
+    width: 200px;
+    background-color: #162648;
+    margin: 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: WHITE;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 0.9em;
+    opacity: 0.95;
+}
+.listItem:hover{
+    background-color: #1e3c8a;
+}
+.preview
+{
+    height: auto;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #f3f6fd;
+    padding-bottom: 100px;
+}
+.previewButtons{
+    height: auto;
+    width: 100%;
+    display: flex;
+gap: 20px;
+padding-left: 50px;
+}
+.previewButton1 ,.previewButton2{
+ display: inline-block;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    background: #e6edff;
+    margin-right: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #4f0ed1;
+    letter-spacing: 0.7px;
+    font-family: "Cerebri Sans", sans-serif;
+    line-height: 1.6;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+.previewButton1:hover{
+   background-color: #fff;
+}
+.previewButton2:hover{
+   background-color: #fff;
+}
+
+.greetingSection{
+
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    
+    
+}
+.greetings{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.gretingPhrase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1a1550;
+}
+.howItWork{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-size: 15px;
+    color: #5a5a5a;
+    text-decoration: none;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+    cursor: pointer;
+    border-radius: 15px;
+    background: none;
+    margin-left: -15px;
+    border: 1px solid #ded2f5;
+}
+.howItWork:hover{
+    background-color: #4f0fd1;
+    color: white;
+    scale: 1.02;
+}
+.navigationArrows{
+ display: flex;
+ gap: 5px;
+ padding: 30px 30px 0 30px;
+ opacity: 0.8;
+}
+.navigationArrows:hover{
+    opacity: 1;
+}
+.navigationButton{
+    color: #4a4c50;
+    border-radius: 15px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #cfcfcf;
+    background: rgb(243, 238, 238);
+    display: flex;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    font-weight: 300;
+    cursor: pointer;
+    text-align: center;
+}
+.pdfShow{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+.previewContainer{
+    max-width: 86%;
+    background-color: #fff;
+    height: 550px;
+    margin: auto;
+    border-end-end-radius: 20px ;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }

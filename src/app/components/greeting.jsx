@@ -1,4 +1,4 @@
-'use client'; // if using in app directory
+'use client';
 
 import React, { useEffect, useState } from 'react';
 
