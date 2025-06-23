@@ -1,4 +1,4 @@
- 'use client'
+'use client'
 
 import Link from 'next/link'
 import Styles from "./score.module.css"
@@ -7,15 +7,15 @@ import { BiAnalyse } from "react-icons/bi"
 import { FiTarget } from "react-icons/fi";
 import { FaPlusSquare } from 'react-icons/fa';
  import Navbar from '../components/navbar/navbar'
- import PdfViewer  from './pdfViewer'
+//  import PdfViewer  from './pdfViewer'
  import React, { useEffect, useState } from 'react';
  import { getAuth, onAuthStateChanged } from 'firebase/auth';
  import { useRouter } from 'next/navigation';
  import Greeting from '../components/greeting';
-  import config from '@/config'
+  // import config from '@/config'
   import { HiArrowSmallLeft } from "react-icons/hi2";
   import { HiOutlineArrowSmallRight } from "react-icons/hi2";
-  import UploadDocument  from '../components/uploadResume/page'
+  // import UploadDocument  from '../components/uploadResume/page'
   import { useFile, fileURL } from '../components/fileContext'
 
 function Score() {

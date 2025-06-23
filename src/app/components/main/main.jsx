@@ -33,7 +33,7 @@ function Main() {
 
         <Image
           className={styles.image}
-          src="/flight.jpg"
+          src="/image/updated-homepage-sketch.png"
           alt="Resume Preview"
           width={400}
           height={400}
