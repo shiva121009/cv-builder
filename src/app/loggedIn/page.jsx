@@ -38,7 +38,7 @@ function LoggedIn() {
 
   return (
     <>
-      <Navbar />
+      <Navbar func="Logout" />
       <div className={Styles.body}>
 
         <div className={Styles.left}>

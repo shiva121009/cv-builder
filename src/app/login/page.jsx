@@ -8,6 +8,7 @@ import { useRouter,usePathname } from 'next/navigation'
 import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import LoggedIn from '../loggedIn/page'
 import config from "../../config.js"
+import { FaGoogle } from "react-icons/fa";
 
 function Login() {
   const [user, setUser] = useState(null); 
@@ -51,7 +52,7 @@ function Login() {
 
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <div className={styles.Container}>
         <div className={styles.loginContainer}>
           <div className={styles.left}>
@@ -72,10 +73,12 @@ function Login() {
           <div className={styles.right}>
             <h3 className={styles.rightHeading}>Choose an option to continue</h3>
             <button className={styles.googleButton} onClick={signInWithGoogle}>
+                 <FaGoogle />
               Sign in with Google
             </button>
             <p className={styles.rightPara}> - or - </p>
             <button className={styles.emailButton} onClick={() => signIn('email')}>
+           
               Sign in with Email
             </button>
             <p className={styles.terms}>

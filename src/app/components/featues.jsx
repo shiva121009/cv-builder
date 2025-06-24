@@ -11,7 +11,8 @@ function Feature() {
   paragraph1="Struggling to write your resume? Don't worry. We have over 250+ sample bullet points from from top resumes across dall industries and skills. Use our templates and sample lines to quickly write an effective resume from scratch."
   paragraph2="With Score My Resume, you can improve one upload at a time. Unlike any other too!, you get specific feedback on your resume's content, including on each bullet point."
   buttonText="Upload resumes >>"
-   imageUrl="/image/Screenshot1.png"  
+  imageUrl="/image/Screenshot1.png"  
+  link ="/login"
 />
 <TopJobsSection 
   title="Proven to land top jobs"
@@ -25,7 +26,8 @@ function Feature() {
   paragraph1="Let's say you apply to or get contacted by a recruiter for 50 job openings. Out of those, your resume might get you 5 interviews, and out of those, you may end up getting one job offer."
   paragraph2="Resume Worded optimizes this job search funnel. With LinkedIn Review, you'll get contacted by more recruiters for more jobs on LinkedIn, thus widening the top part of the funnel. With our resume tools, you'll then be able to ensure you are maximizing the conversion of those jobs to interviews."
   buttonText="Optimize your LinkedIn profile  >>"
- imageUrl="/image/Screenshot3.png"
+  imageUrl="/image/Screenshot3.png"
+  link ="/login"
 />
 
 

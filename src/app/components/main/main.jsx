@@ -23,7 +23,7 @@ function Main() {
           </span>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.getButtons} onClick={() => navigate("/Subscription")}>Get started for free &#8608;</button>
+          <button className={styles.getButtons} onClick={() => navigate("/login")}>Get started for free &#8608;</button>
           <button className={styles.previewButton} onClick={() => navigate('/preview')}> See preview &#8608;</button>
 
         </div>

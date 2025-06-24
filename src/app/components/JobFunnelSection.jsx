@@ -1,7 +1,8 @@
 import styles from './JobFunnelSection.module.css';
+import Link from 'next/link';
 
 export default function JobFunnelSection({ 
-  title, paragraph1, paragraph2, buttonText, imageUrl 
+  title, paragraph1, paragraph2, buttonText, imageUrl , link
 }) {
   return (
     <section className={styles.section}>
@@ -18,7 +19,7 @@ export default function JobFunnelSection({
           <h2>{title}</h2>
           <p>{paragraph1}</p>
           <p>{paragraph2}</p>
-          <button>{buttonText}</button>
+         <Link href={link}> <button>{buttonText}</button></Link>
         </div>
 
       </div>

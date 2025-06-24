@@ -40,7 +40,7 @@ console.log('fileURL:', fileURL);
   
   return (
     <>  
-    <Navbar/>
+    <Navbar func="Logout"/>
       <div className={Styles.body}>
       
       <div className={Styles.left}>
