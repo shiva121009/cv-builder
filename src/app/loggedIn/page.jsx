@@ -14,6 +14,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FiTarget } from "react-icons/fi";
 import Subscription from '../Subscription/page';
 import UploadResume from '../components/uploadResume/page';
+import ProtectedRoute from '../components/protected routes';
 
 // import loggedIn, {user} from '../components/loggedin/page';
 function LoggedIn() {
@@ -37,7 +38,8 @@ function LoggedIn() {
   // }
 
   return (
-    <>
+
+    <ProtectedRoute>
       <Navbar func="Logout" />
       <div className={Styles.body}>
 
@@ -268,10 +270,10 @@ function LoggedIn() {
         </div>
       </div>
 
+</ProtectedRoute>
 
-
-    </>
-
+    
+    
   )
 }
 

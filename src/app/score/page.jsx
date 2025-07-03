@@ -17,6 +17,7 @@ import { FaPlusSquare } from 'react-icons/fa';
   import { HiOutlineArrowSmallRight } from "react-icons/hi2";
   // import UploadDocument  from '../components/uploadResume/page'
   import { useFile, fileURL } from '../components/fileContext'
+import ProtectedRoute from '../components/protected routes'
 
 function Score() {
   const { file, fileURL } = useFile();
@@ -39,7 +40,7 @@ function Score() {
 console.log('fileURL:', fileURL);
   
   return (
-    <>  
+    <ProtectedRoute>
     <Navbar func="Logout"/>
       <div className={Styles.body}>
       
@@ -289,7 +290,7 @@ console.log('fileURL:', fileURL);
      
     </div>
     
-    </>
+    </ProtectedRoute>
 
   )
 }

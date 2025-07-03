@@ -6,6 +6,8 @@ import { FaCloudUploadAlt, FaLock } from "react-icons/fa";
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useFile } from '../fileContext';
+import { PathParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
+import ProtectedRoute from '../protected routes';
 
 function UploadDocument() {
   const { setFile, setFileURL } = useFile();
@@ -32,7 +34,8 @@ function UploadDocument() {
   };
 
   return (
-    <div className={Styles.body}>
+    <ProtectedRoute>
+      <div className={Styles.body}>
       <h1 className={Styles.uploadHeading}>Upload Your Resume</h1>
 
       <div onClick={handleClick} className={Styles.container}>
@@ -71,6 +74,7 @@ function UploadDocument() {
         </Link>. Your resume is processed securely and stays private to you.
       </span>
     </div>
+    </ProtectedRoute>
   );
 }
 
