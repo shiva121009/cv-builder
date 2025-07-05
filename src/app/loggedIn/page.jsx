@@ -15,6 +15,7 @@ import { FiTarget } from "react-icons/fi";
 import Subscription from '../Subscription/page';
 import UploadResume from '../components/uploadResume/page';
 import ProtectedRoute from '../components/protected routes';
+import NotAvailable from '../components/notAvailable/page';
 
 // import loggedIn, {user} from '../components/loggedin/page';
 function LoggedIn() {
@@ -53,7 +54,8 @@ function LoggedIn() {
             <div className={Styles.quickLink}>
               <h1>Quick Links</h1></div>
             <div className={Styles.container}>
-              <Link href="/score-my-resume" className={Styles.containerLinks}>
+             <Link href="/components/uploadResume" className={Styles.containerLinks}>
+
                 <div className={Styles.paraLink}>Score My Resume</div>
                 <Image
                   src="/image/smr-icon-dashboard.png"
@@ -66,7 +68,7 @@ function LoggedIn() {
                   Get expert feedback on your resume, instantly
                 </div>
               </Link>
-              <Link href="/score-my-resume" className={Styles.containerLinks}>
+              <Link href="/components/notAvailable" className={Styles.containerLinks}>
                 <div className={Styles.paraLink}>Targeted Resume</div>
                 <Image
                   src="/image/targeted-resume.png"
@@ -79,7 +81,7 @@ function LoggedIn() {
                   Tailor your resume to a job description
                 </div>
               </Link>
-              <Link href="/score-my-resume" className={Styles.containerLinks}>
+              <Link href="/components/notAvailable" className={Styles.containerLinks}>
                 <div className={Styles.paraLink}>LinkedIn Review</div>
                 <Image
                   src="/image/linkedin-review.png"
@@ -102,17 +104,17 @@ function LoggedIn() {
             </div>
             <div className={Styles.linkContainer}>
               <div className={Styles.containerRow1}>
-                <Link href="/"> <div className={`${Styles.links} ${Styles.active}`} >
+                <Link href="/components/uploadResume"> <div className={`${Styles.links} ${Styles.active}`} >
                   <FaMagic className="text-lg icon" style={{ color: 'white' }} />
                   <p >PROGRESS</p>
                 </div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/components/uploadResume"> <div className={Styles.links}>
                   <FaBolt className="text-lg icon" style={{ color: 'white' }} />
                   <p>RESUMES</p></div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/components/notAvailable"> <div className={Styles.links}>
                   <FaLinkedin className="text-lg icon" style={{ color: 'white' }} />
                   <p>LINKED IN</p></div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/components/feedback"> <div className={Styles.links}>
                   <FaCommentAlt className="text-lg icon" style={{ color: 'white' }} />
                   <p>FEEDBACK</p></div></Link>
               </div>
@@ -121,13 +123,13 @@ function LoggedIn() {
                   <FaStar className="text-lg icon" style={{ color: '#0bf9a0' }} />
                   <p style={{ color: "#0bf9a0" }}>
                     GET PRO</p></div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/components/notAvailable"> <div className={Styles.links}>
                   <FaAward className="text-lg icon" style={{ color: 'white' }} />
                   <p>CAREER TOOLS</p></div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/components/helpCenter"> <div className={Styles.links}>
                   <FaLifeRing className="text-lg icon" style={{ color: 'white' }} />
                   <p>HELP CENTER</p></div></Link>
-                <Link href="/"> <div className={Styles.links}>
+                <Link href="/score"> <div className={Styles.links}>
                   <FaCog className="text-lg icon" style={{ color: 'white' }} />
                   <p>MY ACCOUNT</p></div></Link>
               </div>
@@ -208,7 +210,7 @@ function LoggedIn() {
                   <h2 className={Styles.boxDesc}><strong>You have not tried this tool yet</strong>
                    . Your resume may be missing important keywords. Match it to a job posting to fix.						
                   </h2>
-                  <Link href="/"><div className={Styles.boxButton}><FiTarget className={Styles.boxIcons} ></FiTarget><p className={Styles.boxButtonPara}>Target your resume</p></div></Link>
+                  <Link href="/components/notAvailable"><div className={Styles.boxButton}><FiTarget className={Styles.boxIcons} ></FiTarget><p className={Styles.boxButtonPara}>Target your resume</p></div></Link>
                 </div>
                 <div className={Styles.boxRight}>
                   <div className={Styles.scoreContainer}>
@@ -224,7 +226,7 @@ function LoggedIn() {
                   <h2 className={Styles.boxDesc}><strong>You have not optimized your LinkedIn profile yet.</strong>
                     You might be missing out on opportunities from recruiters.						
                   </h2>
-                  <Link href="/"><div className={Styles.boxButton}><FaLinkedin className={Styles.boxIcons}></FaLinkedin><p className={Styles.boxButtonPara}>  Upload LinkedIn profile</p></div></Link>
+                  <Link href="/components/notAvailable"><div className={Styles.boxButton}><FaLinkedin className={Styles.boxIcons}></FaLinkedin><p className={Styles.boxButtonPara}>  Upload LinkedIn profile</p></div></Link>
                 </div>
                 <div className={Styles.boxRight}>
                   <div className={Styles.scoreContainer}>
@@ -242,7 +244,7 @@ function LoggedIn() {
               </div>
                <div className={Styles.box} >
                 <div className={Styles.boxContent}>
-               <Link href="/"> <h1 className={Styles.boxheading}>COVER LETTER GENERATOR</h1></Link> 
+               <Link href="/components/notAvailable"> <h1 className={Styles.boxheading}>COVER LETTER GENERATOR</h1></Link> 
                   <h2 className={Styles.boxDesc}>Let our AI write a great cover letter for you, in seconds. 
                   </h2>
                 </div>

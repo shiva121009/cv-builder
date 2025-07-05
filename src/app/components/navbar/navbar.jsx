@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "./navbar.module.css";
 import React from "react";
 import Link from "next/link";
@@ -6,24 +7,29 @@ import { usePathname, useRouter } from "next/navigation";
 import { getAuth, signOut } from "firebase/auth";
 
 function Navbar() {
-  const rtPath = usePathname(); 
-  const router = useRouter(); 
+  const rtPath = usePathname();
+  const router = useRouter();
 
-  console.log(rtPath);
+  const handleLogout = async () => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (!confirmLogout) return;
 
-  const handleLogout = () => {
-    const confirmLogout = confirm("Are you sure you want to logout?");
-    if (confirmLogout) {
-      const auth = getAuth();
-      signOut(auth)
-        .then(() => {
-          console.log("User logged out");
-          router.push("/"); 
-        })
-        .catch((error) => {
-          console.error("Logout error:", error);
-        });
+    const token = localStorage.getItem("access_token");
+
+    try {
+      await fetch("https://ai-cv-builder-be.fly.dev/auth/logout", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+    } catch (error) {
+      console.error("Logout API failed:", error);
     }
+
+    localStorage.clear();
+    await signOut(getAuth());
+    router.push("/");
   };
 
   return (
@@ -35,9 +41,9 @@ function Navbar() {
       </div>
 
       <div className={styles.navbarButtons}>
-        {rtPath === "/" ? ( 
+        {rtPath === "/" ? (
           <div>
-            <Link href={"/login"}>Login</Link>
+            <Link href="/login">Login</Link>
           </div>
         ) : (
           <div>
@@ -61,4 +67,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

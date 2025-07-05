@@ -46,6 +46,7 @@ function Login() {
           if (res.ok && data.access_token) {
             console.log("✅ Token received, saving to localStorage");
             localStorage.setItem("token", data.access_token);
+              localStorage.setItem("refresh_token", data.refresh_token);
             router.push("./loggedIn");
           } else {
             console.error("❌ Token missing or response not OK");

@@ -227,13 +227,13 @@ margin-top: 20px;
 }
 .list{
     display: flex;
-    background-color: #414f6f;
+    /* background-color: #414f6f; */
     opacity: 0.98;
     width: 600px; 
 }
 .listItem{
     height: 50px;
-    width: 200px;
+    width: 580px;
     background-color: #162648;
     margin: 0 1px;
     display: flex;
